@@ -1,0 +1,8 @@
+faker
+pandas
+numpy
+pyyaml
+boto3
+kafka-python
+pytest
+ruff

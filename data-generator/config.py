@@ -1,0 +1,14 @@
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATA_DIR = BASE_DIR / "data"
+
+CUSTOMER_COUNT = 10_000
+PRODUCT_COUNT = 1_000
+ORDER_COUNT = 100_000
+PAYMENT_COUNT = 120_000
+CLICKSTREAM_COUNT = 1_000_000
+TICKET_COUNT = 25_000
+
+RANDOM_SEED = 42
