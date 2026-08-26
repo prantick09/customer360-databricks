@@ -1,7 +1,7 @@
 bundle:
   name: customer360-databricks
 
-includes:
+include:
   - resources'*.yml
 
 targets:
