@@ -15,7 +15,7 @@ Faker.seed(RANDOM_SEED)
 random.seed(RANDOM_SEED)
 
 
-BOOTSTRAP_SERVERS = "localhost:9092"
+BOOTSTRAP_SERVERS = "localhost:19092"
 
 
 producer = KafkaProducer(
