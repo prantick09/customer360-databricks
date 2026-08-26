@@ -1,0 +1,10 @@
+resources:
+  jobs:
+    customer360_environment_test:
+      name: customer360-environment-test
+
+      tasks:
+        - task_key: environment_test
+        
+          notebook_task:
+            notebook_path: ../notebooks/00_environment_test.py

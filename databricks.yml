@@ -1,2 +1,9 @@
 bundle:
   name: customer360-databricks
+
+includes:
+  - resources'*.yml
+
+targets:
+  dev:
+    mode: development
