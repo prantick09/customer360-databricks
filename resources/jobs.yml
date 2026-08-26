@@ -7,4 +7,4 @@ resources:
         - task_key: environment_test
         
           notebook_task:
-            notebook_path: ../notebooks/00_environment_test.py
+            notebook_path: ../src/notebooks/00_environment_test.py
