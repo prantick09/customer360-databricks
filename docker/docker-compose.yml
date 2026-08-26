@@ -1,0 +1,51 @@
+services:
+
+  minio:
+    image: minio/minio:latest
+    container_name: customer360-minio
+
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: minioadmin123
+
+    command: server /data --console-address ":9001"
+
+    volumes:
+      - minio_data:/data
+
+
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    container_name: customer360-redpanda
+
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - "1G"
+      - --reserve-memory
+      - "0M"
+      - --node-id
+      - "0"
+      - --check=false
+
+    ports:
+      - "9092:9092"
+      - "9644:9644"
+
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+
+
+volumes:
+
+  minio_data:
+
+  redpanda_data:

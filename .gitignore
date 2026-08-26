@@ -7,7 +7,7 @@ __pycache__/
 .env
 *.log
 
-data/raw/
+
 data/generated/
 
 .idea/
